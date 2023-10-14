@@ -9,7 +9,7 @@ use tokio::time::sleep;
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let (mut browser, mut handler) = Browser::launch(
         BrowserConfig::builder()
-            // .chrome_executable(r#"./chrome/chrome.exe"#)
+            .chrome_executable(r#"./chrome/chrome.exe"#)
             .with_head()
             .incognito()
             .args(["--headless=new"])
