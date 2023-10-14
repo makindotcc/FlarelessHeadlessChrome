@@ -1,0 +1,9 @@
+[package]
+name = "flarelessheadlesschrome"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.33.0", features = ["full"] }
+chromiumoxide = "0.5.4"
+futures = "0.3"
