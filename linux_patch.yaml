@@ -1,16 +1,16 @@
-input_file: './chrome_win_x64/118.0.5993.71/chrome_org.dll'
-output_file: './chrome_win_x64/118.0.5993.71/chrome.dll'
+input_file: './chrome_linux_x64/chrome_org'
+output_file: './chrome_linux_x64/chrome'
 patch:
   # Patch completely blink::Navigator::webdriver function to "return 0;"
   - name: 'blink::Navigator::webdriver'
-    sig: '53 48 83 EC ? 48 8B ? ? ? ? ? 48 ? ? 48 ? ? ? 28 B3 01 80 3D ? ? ? ? 00 74 ? 48 8b ? ? ?'
+    sig: 'B0 01 80 3D ? ? ? ? 00 74 01 C3 55 48 89 e5 48 83 ec ? c6 ? ? 00'
     with:
       - '48 c7 c0 00 00 00 00' # mov rax, 0x00
       - 'c3'                   # ret
     with_offset: 0
   # Patch "embedder_support::GetUserAgentInternal" to IGNORE headless switch.
   - name: 'embedder_support::GetUserAgentInternal headless switch'
-    sig: '48 8D 15 ? ? ? ? E8 ? ? ? ? 84 C0 0F 85 ? ? ? ? 83 FF 01 74 ?'
+    sig: '48 8D 35 ? ? ? ? E8 ? ? ? ? 84 C0 0F 85 ? ? ? ? 41 ? ? 01'
     with:
       - '90 90 90 90 90 90'
     with_offset: 14
