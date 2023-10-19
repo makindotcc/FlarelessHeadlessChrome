@@ -10,7 +10,6 @@ patch:
     with_offset: 0
   # Patch "embedder_support::GetUserAgentInternal" to IGNORE headless switch.
   - name: 'embedder_support::GetUserAgentInternal headless switch'
-    # Headles + \0 + next string to the Headless because we dont want to replace all headless strings
     sig: '48 8D 15 ? ? ? ? E8 ? ? ? ? 84 C0 0F 85 ? ? ? ? 83 FF 01 74 ?'
     with:
       - '90 90 90 90 90 90'
