@@ -1,5 +1,6 @@
 # FlarelessHeadlessChrome
-Pass cloudflare turnstile challenge using patched chrome binary (Windows/Linux x64).
+Pass cloudflare turnstile challenge using patched chrome binary (Windows/Linux x64). \
+Pass [friendlycaptcha](https://friendlycaptcha.com/) too.
 
 ## How it works
 Currently, with [new headless mode](https://developer.chrome.com/articles/new-headless/) the only thing
