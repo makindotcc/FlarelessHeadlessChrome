@@ -5,11 +5,16 @@ use futures::StreamExt;
 use std::time::Duration;
 use tokio::time::sleep;
 
+#[cfg(target_os = "windows")]
+const CHROME_PATH: &str = "./chrome_win_x64/chrome.exe";
+#[cfg(target_os = "linux")]
+const CHROME_PATH: &str = "./chrome_linux_x64/chrome";
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let (mut browser, mut handler) = Browser::launch(
         BrowserConfig::builder()
-            .chrome_executable(r#"./chrome/chrome.exe"#)
+            .chrome_executable(CHROME_PATH)
             .with_head()
             .incognito()
             .args(["--headless=new"])
