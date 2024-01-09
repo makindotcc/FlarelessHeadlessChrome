@@ -1,5 +1,5 @@
-input_file: './chrome_win_x64/118.0.5993.71/chrome_org.dll'
-output_file: './chrome_win_x64/118.0.5993.71/chrome.dll'
+input_file: './chrome_win_x64/120.0.6099.200/chrome_org.dll'
+output_file: './chrome_win_x64/120.0.6099.200/chrome.dll'
 patch:
   # Patch completely blink::Navigator::webdriver function to "return 0;"
   - name: 'blink::Navigator::webdriver'
