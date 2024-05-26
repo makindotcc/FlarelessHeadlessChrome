@@ -1,6 +1,8 @@
 # FlarelessHeadlessChrome
 Pass cloudflare turnstile challenge using patched chrome binary (Windows/Linux x64). \
-Pass [friendlycaptcha](https://friendlycaptcha.com/) too.
+Tested & working also at:
+- [friendlycaptcha](https://friendlycaptcha.com/)
+- [vercel waf](https://vercel.com/docs/security/vercel-firewall)
 
 ## How it works
 Currently, with [new headless mode](https://developer.chrome.com/articles/new-headless/) the only thing
