@@ -1,4 +1,8 @@
+# Archived
+Cloudflare added couple new things, but I'm working on cf reversal commercialy, so I can't provide details on it 😔
+
 # FlarelessHeadlessChrome
+
 Pass cloudflare turnstile challenge using patched chrome binary (Windows/Linux x64). \
 Tested & working also at:
 - [friendlycaptcha](https://friendlycaptcha.com/)
